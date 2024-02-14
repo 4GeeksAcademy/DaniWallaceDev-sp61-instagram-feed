@@ -1,0 +1,32 @@
+img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 100%;
+}
+
+.img-thumbnail {
+    border: 0;
+}
+
+.nav-tabs {
+    border-bottom: 0px solid #dee2e6;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #0080ff;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {
+    color:#495057;
+}
+
+.fa-camera {
+    border: solid 1px lightgray;
+}
+
+.fa-location-dot {
+    border: solid 1px lightgray;
+    padding: 8px 11px;
+}

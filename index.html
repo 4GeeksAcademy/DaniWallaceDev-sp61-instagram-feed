@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+<!-- Contenedor principal de la página -->
+    <div class="container-fluid p-0">
+        <nav class="navbar p-1 bg-light">
+<!-- Mi texto e icono -->
+            <div class="nav-brand">
+                <h4><i class="fa-brands fa-instagram pe-1"></i>Instagram</h4>
+            </div>
+<!-- Mis botones -->
+            <div class="navbar-toggler justify-content-end">
+                <button href="#createmodal" type="button" data-bs-target="#createmodal" data-bs-toggle="modal" class="btn btn-success me-1">Create a new post</button>
+<!-- Modal -->
+                <div class="modal" id="createmodal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Create a new post</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+<!-- Cuadro relleno del modal -->
+                          <form>
+                              <label for="caption" class="col-form-label">Caption:</label>
+                              <textarea class="form-control" id="caption" placeholder="Add the caption of your post here"></textarea>
+                              <div class="icons-modal mt-3 ms-2"><i class="fa-solid fa-camera bg-light me-2 p-2"></i><i class="fa-solid fa-location-dot bg-light"></i></div>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+<!-- Botón dropdown -->
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-gear"></i></button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                    <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="#">Log Out</a></li>
+                </ul>
+                
+          </nav>
+
+<!-- Contenedor de post-imagenes -->
+        <div class="container-fluid">
+          <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="fa-solid fa-square-full"></i></button>
+            </li>
+           </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+              <div class="container-fluid">
+                <div class="row g-3">
+                  <div class="col-xl-4 col-12 col-md-4 p-1"><img class="img-thumbnail" src="src/images/fullstack61.png"></div>
+                  <div class="col-xl-4 col-12 col-md-4 p-1"><img class="img-thumbnail" src="src/images/australia.jpg"></div>
+                  <div class="col-xl-4 col-12 col-md-4 p-1"><img class="img-thumbnail" src="src/images/hotel.jpg"></div>
+      
+                  <div class="col-xl-4 col-12 col-md-4 p-1"><img class="img-thumbnail" src="src/images/post_1.jpg"></div>
+                  <div class="col-xl-4 col-12 col-md-4 p-1"><img class="img-thumbnail" src="src/images/montañas.png"></div>
+                  <div class="col-xl-4 col-12 col-md-4 p-1"><img class="img-thumbnail" src="src/images/pizza.jpg"></div>
+      
+                  <div class="col-xl-4 col-12 col-md-4 p-1"><img class="img-thumbnail" src="src/images/retrato_perfil.jpg"></div>
+                  <div class="col-xl-4 col-12 col-md-4 p-1"><img class="img-thumbnail" src="src/images/retrato.jpg"></div>
+                  <div class="col-xl-4 col-12 col-md-4 p-1"><img class="img-thumbnail" src="src/images/leopardos.jpg"></div>
+                </div>
+              </div>  
+        </div>
+
+<!-- Tab Feed -->
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+              
+<!-- Post-Card Feed -->
+            <div class="row d-flex justify-content-center">
+              <div class="col-11 col-md-7 col-xl-5 card mt-5 mb-3 p-0 bg-light">
+                  <div class="card-header d-flex justify-content-between">
+                      <h5 class="card-title fs-4 ">Titulo post</h5><span class="card-text">08/26</span>
+                  </div>
+                  <img src="src/images/fullstack61.png">
+                  <div class="card-footer">
+                    <p class="card-title fs-6 fw-bold">512 Likes</p>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore ut laboriosam quaerat consequatur eaque cumque, molestias id hic alias ex blanditiis perspiciatis labore quisquam numquam soluta aut qui placeat officia?</p>
+                  </div>
+          </div>
+          <div class="row d-flex justify-content-center">
+            <div class="col-11 col-md-7 col-xl-5 card mt-5 mb-3 p-0 bg-light">
+                <div class="card-header d-flex justify-content-between">
+                    <h5 class="card-title fs-4 ">Titulo post</h5><span class="card-text">08/26</span>
+                </div>
+                <img src="src/images/retrato.jpg">
+                <div class="card-footer">
+                  <p class="card-title fs-6 fw-bold">1024 Likes</p>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore ut laboriosam quaerat consequatur eaque cumque, molestias id hic alias ex blanditiis perspiciatis labore quisquam numquam soluta aut qui placeat officia?</p>
+                </div>
+            </div>
+
+        <div class="row d-flex justify-content-center">
+          <div class="col-11 col-md-7 col-xl-5 card mt-5 mb-3 p-0 bg-light">
+              <div class="card-header d-flex justify-content-between">
+                  <h5 class="card-title fs-4 ">Titulo post</h5><span class="card-text">08/26</span>
+              </div>
+              <img src="src/images/post_1.jpg">
+              <div class="card-footer">
+                <p class="card-title fs-6 fw-bold">2048 Likes</p>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore ut laboriosam quaerat consequatur eaque cumque, molestias id hic alias ex blanditiis perspiciatis labore quisquam numquam soluta aut qui placeat officia?</p>
+              </div>
+          </div>
+      </div>
+            </div>
+          </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
